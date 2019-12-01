@@ -5,7 +5,8 @@
 
 class NeuralNetwork
 {
-	NeuralNetwork(int layers);
+	NeuralNetwork(int layers){}
+	
 	void stepForward(const vector<double> &Input);
 	int getResult();
 
