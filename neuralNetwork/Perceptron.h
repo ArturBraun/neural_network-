@@ -3,7 +3,7 @@
 class Perceptron
 {
 	Perceptron();
-	~Perceptron();
+	//~Perceptron();
 	void setOutput();
 	double getOutput();
 

@@ -7,7 +7,7 @@ using namespace std;
 class Layer
 {
 	Layer();
-	~Layer();
+	//~Layer();
 
 private:
 	vector<Perceptron> neurons;

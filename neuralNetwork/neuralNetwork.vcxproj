@@ -94,7 +94,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NeuralNetwork.cpp" />
     <ClCompile Include="NeuralNetworkImplementation.cpp" />
-    <ClCompile Include="Percepton.cpp" />
+    <ClCompile Include="Perceptron.cpp" />
     <ClCompile Include="TrainingData.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -113,7 +113,7 @@
     <ClInclude Include="Layer.h" />
     <ClInclude Include="NeuralNetwork.h" />
     <ClInclude Include="NeuralNetworkImplementation.h" />
-    <ClInclude Include="Percepton.h" />
+    <ClInclude Include="Perceptron.h" />
     <ClInclude Include="TrainingData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
