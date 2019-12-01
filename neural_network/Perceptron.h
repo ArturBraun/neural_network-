@@ -2,6 +2,8 @@
 
 class Perceptron
 {
+public:
+
 	Perceptron();
 	~Perceptron();
 	void setOutput();

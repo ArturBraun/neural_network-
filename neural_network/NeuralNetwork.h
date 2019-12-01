@@ -5,6 +5,8 @@
 
 class NeuralNetwork
 {
+public:
+
 	NeuralNetwork(int layers){}
 	
 	void stepForward(const vector<double> &Input);
@@ -15,4 +17,6 @@ private:
 
 
 };
+
+
 

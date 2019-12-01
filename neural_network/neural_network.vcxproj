@@ -154,7 +154,8 @@
     <ClCompile Include="AbstractNeuralNetwork.cpp" />
     <ClCompile Include="BackPropagation.cpp" />
     <ClCompile Include="BreastCancerClassification.cpp" />
-    <ClCompile Include="Dataset.cpp" />
+    <ClCompile Include="Perceptron.cpp" />
+    <ClCompile Include="TrainingData.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NeuralNetwork.cpp" />
@@ -166,7 +167,8 @@
     <ClInclude Include="ActivFunctions.h" />
     <ClInclude Include="BackPropagation.h" />
     <ClInclude Include="BreastCancerClassification.h" />
-    <ClInclude Include="Dataset.h" />
+    <ClInclude Include="Perceptron.h" />
+    <ClInclude Include="TrainingData.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="NeuralNetwork.h" />
     <ClInclude Include="NeuralNetworkImplementation.h" />

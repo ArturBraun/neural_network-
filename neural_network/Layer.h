@@ -6,6 +6,8 @@ using namespace std;
 
 class Layer
 {
+public:
+
 	Layer();
 	~Layer();
 
