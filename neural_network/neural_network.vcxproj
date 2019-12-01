@@ -159,18 +159,17 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NeuralNetwork.cpp" />
     <ClCompile Include="NeuralNetworkImplementation.cpp" />
-    <ClCompile Include="Percepton.cpp" />
     <ClCompile Include="TestingAnalysis.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractNeuralNetwork.h" />
+    <ClInclude Include="ActivFunctions.h" />
     <ClInclude Include="BackPropagation.h" />
     <ClInclude Include="BreastCancerClassification.h" />
     <ClInclude Include="Dataset.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="NeuralNetwork.h" />
     <ClInclude Include="NeuralNetworkImplementation.h" />
-    <ClInclude Include="Percepton.h" />
     <ClInclude Include="TestingAnalysis.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

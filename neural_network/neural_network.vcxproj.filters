@@ -30,9 +30,6 @@
     <ClCompile Include="Layer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Percepton.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BackPropagation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -59,9 +56,6 @@
     <ClInclude Include="Layer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Percepton.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BackPropagation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -72,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AbstractNeuralNetwork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ActivFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

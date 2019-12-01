@@ -1,5 +1,6 @@
 #pragma once
-class NeuralNetworkImplementation
-{
-};
+#include "NeuralNetwork.h"
+
+
+
 
