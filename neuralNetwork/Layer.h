@@ -6,8 +6,10 @@ using namespace std;
 
 class Layer
 {
+public:
+
 	Layer();
-	//~Layer();
+	~Layer();
 
 private:
 	vector<Perceptron> neurons;

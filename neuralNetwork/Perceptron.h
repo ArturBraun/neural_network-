@@ -2,8 +2,10 @@
 
 class Perceptron
 {
+public:
+
 	Perceptron();
-	//~Perceptron();
+	~Perceptron();
 	void setOutput();
 	double getOutput();
 

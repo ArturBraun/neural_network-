@@ -10,6 +10,9 @@ class GUI : public QMainWindow
 public:
 	GUI(QWidget *parent = Q_NULLPTR);
 
+//Slots
+	bool loadData();
+
 private:
 	Ui::GUIClass ui;
 };
