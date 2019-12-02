@@ -1,19 +1,21 @@
 #pragma once
 #include "NeuralNetwork.h"
 
+#include <iostream>
 #include <string>
 #include <vector>
-
-using namespace std;
 
 class NeuralNetworkImplementation
 {
 public:
-	NeuralNetwork* net;
+	NeuralNetworkImplementation();
+	NeuralNetworkImplementation(std::shared_ptr<NeuralNetwork> pointer);
+	~NeuralNetworkImplementation();
+
 	string getClassification(vector<double>& inputData);
 
 private:
-
+	std::shared_ptr<NeuralNetwork> pNeuralNetwork;
 
 };
 

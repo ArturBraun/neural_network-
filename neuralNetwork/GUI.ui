@@ -7,15 +7,124 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>800</height>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>GUI</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout_3">
+   <layout class="QGridLayout" name="gridLayout_4">
     <item row="0" column="0">
+     <widget class="QGroupBox" name="ParametersGroupBox">
+      <property name="title">
+       <string>Parameters</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="RadiusLabel">
+         <property name="text">
+          <string>Radius</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="RadiusLineEdit"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="TextureLabel">
+         <property name="text">
+          <string>Texture</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="TextureLineEdit"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="PerimeterLabel">
+         <property name="text">
+          <string>Perimeter</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="PerimeterLineEdit"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="AreaLabel">
+         <property name="text">
+          <string>Area</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="AreaLineEdit"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="SmoothnessLabel">
+         <property name="text">
+          <string>Smoothness</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="SmoothnessLineEdit"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="CompactnessLabel">
+         <property name="text">
+          <string>Compactness</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="CompactnessLineEdit"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="ConcavityLabel">
+         <property name="text">
+          <string>Concavity</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="ConcavityLineEdit"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="ConcavePointsLabel">
+         <property name="text">
+          <string>Concave points</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="ConcavePointsLineEdit"/>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="SymmetryLabel">
+         <property name="text">
+          <string>Symmetry</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLineEdit" name="SymmetryLineEdit"/>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="FractalDimensionLabel">
+         <property name="text">
+          <string>Fractal dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QLineEdit" name="FractalDimensionLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
      <widget class="QFrame" name="PushButtonsFrame">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -23,15 +132,8 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout_2">
+      <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
-        <widget class="QPushButton" name="LoadDataPushButton">
-         <property name="text">
-          <string>Load Data</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
         <widget class="QPushButton" name="RunProcessPushButton">
          <property name="text">
           <string>Run Process</string>
@@ -41,7 +143,7 @@
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item row="1" column="0" colspan="2">
      <widget class="QFrame" name="LogsFrame">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>

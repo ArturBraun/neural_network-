@@ -3,12 +3,11 @@
 class Perceptron
 {
 public:
-
-	Perceptron();
+	Perceptron(int numOfInputs);
 	~Perceptron();
 	void setOutput();
 	double getOutput();
 
 private:
-	int numofInputs;
+	int numberOfInputs;
 };

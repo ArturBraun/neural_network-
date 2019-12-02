@@ -8,12 +8,12 @@ class Layer
 {
 public:
 
-	Layer();
+	Layer(int numOfNeurons);
 	~Layer();
 
 private:
 	vector<Perceptron> neurons;
-	int numofNeurons;
+	int numOfNeurons;
 
 
 };

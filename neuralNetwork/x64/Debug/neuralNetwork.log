@@ -1,1 +1,5 @@
-﻿  neuralNetwork.vcxproj -> C:\Users\artur\Desktop\5 semestr\ZPR\Projekt_siec_neuronowa\neuralNetwork\x64\Debug\neuralNetwork.exe
+﻿  moc GUI.h
+  GUI.cpp
+  main.cpp
+  moc_GUI.cpp
+  neuralNetwork.vcxproj -> C:\Users\artur\Desktop\5 semestr\ZPR\Projekt_siec_neuronowa\neuralNetwork\x64\Debug\neuralNetwork.exe
