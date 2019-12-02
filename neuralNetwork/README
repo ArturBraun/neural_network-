@@ -1,0 +1,36 @@
+﻿Do skompilowania projektu niezbędne są:
+
+    
+Biblioteki Qt5
+ (zgodne z wersją 5.13.2)  
+CMake w wersji co najmniej 3.6
+    
+W przypadku systemu Linux make
+    
+Kompilator C++ (VS, g++, etc.)
+
+
+
+W systemach korzystających z repozytoriów Debiana (m.in. Ubuntu) wystarczy zainstalować paczkę "qt5base-dev".
+
+W przypadku pozostałych systemów należy zainstalować Qt pobierając go wpierw ze strony projektu - https://www.qt.io/download-open-source/
+
+
+
+Systemy Linux
+
+
+W terminalu:
+
+    mkdir build && cd build # stworzenie i przejście do katalogu build
+    
+cmake ../ # uruchomienie CMake
+    
+make # kompilacja i konsolidacja projektu
+    
+./ZPR_NN # uruchomienie programu
+
+
+
+System Windows
+kompilacja w programie VisualStudio

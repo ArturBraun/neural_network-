@@ -14,7 +14,6 @@ add_executable(ZPR_NN ${SOURCE_FILES})
 include_directories(src)
 
 add_subdirectory(src)
-add_subdirectory(src/GUI)
 
 add_library(GUI ${SOURCE_FILES})
 

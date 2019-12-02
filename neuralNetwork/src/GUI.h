@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <QtWidgets/QMainWindow>
-#include "ui_GUI.h"
+#include "GUI_.h"
 #include "NeuralNetworkImplementation.h"
 #include <qstring.h>
 
