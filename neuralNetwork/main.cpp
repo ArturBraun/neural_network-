@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 	gui.printLogs(pNeuralNetworkImplementation->loadDataAndTrain());
 
 	gui.show();
-	return a.exec();
+	return gui.exec();
 
 }
 
