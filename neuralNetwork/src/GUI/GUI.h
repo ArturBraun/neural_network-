@@ -3,8 +3,7 @@
 #include <vector>
 #include <QtWidgets/QMainWindow>
 #include "GUI1.h"
-//#include "NeuralNetworkImplementation.h"
-#include "../NeuralNetworkImplementation.h"
+#include "NeuralNetworkImplementation.h"
 #include <qstring.h>
 
 class GUI : public QMainWindow
@@ -16,6 +15,8 @@ public:
 
 	void printLogs(std::string content); //wypisywanie logow w GUI do LogsTextEdit
 	void printError(std::string content); //wypisywanie kominkatach o bledach do LogsTextEdit
+
+	void runErrorMessageBox(std::pair<char*,char*>& titleAndMessage);
 
 private slots:
 	void runProcess(); //odpalanie procesu kwalifikacji dla pobranych danych

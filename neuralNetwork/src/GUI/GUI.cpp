@@ -1,5 +1,7 @@
 #include "GUI.h"
 #include <string>
+#include <qmessagebox.h>
+#include <stdlib.h>
 
 GUI::GUI(std::shared_ptr<NeuralNetworkImplementation> pointer, QWidget* parent)
 	: pNeuralNetworkImplementation(pointer), QMainWindow(parent)
@@ -23,6 +25,13 @@ void GUI::newFile() {
 	ui.NormalNucleoliLineEdit->clear();
 	ui.MitosesLineEdit->clear();
 	ui.LogsTextEdit->clear();
+}
+
+void GUI::runErrorMessageBox(std::pair<char*, char*>& titleAndMessage) {
+	QMessageBox::StandardButton errorWithData;
+	errorWithData = QMessageBox::critical(this, tr(titleAndMessage.first),
+		tr(titleAndMessage.second),
+		QMessageBox::Ok);
 }
 
 void GUI::clearLogs() {
