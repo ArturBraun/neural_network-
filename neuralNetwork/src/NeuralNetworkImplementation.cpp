@@ -1,4 +1,5 @@
 #include "NeuralNetworkImplementation.h"
+#include "Exceptions.h"
 
 NeuralNetworkImplementation::NeuralNetworkImplementation(int numberOfLayers, int numberOfInputNeurons, std::string const& dataFilename, double desiredTrainingSetAccuracy, double desiredTrainingSetMSE)
 	:pNeuralNetwork(new NeuralNetwork(numberOfLayers, numberOfInputNeurons)),
@@ -10,8 +11,9 @@ NeuralNetworkImplementation::NeuralNetworkImplementation(int numberOfLayers, int
 
 std::string NeuralNetworkImplementation::loadDataAndTrain() {
 	int loadResult = pTrainingData->loadData();
-	if (loadResult == -1) return "Cannot open file with data!";
-	if (loadResult == 0) return "The file with data is empty!";
+
+	if (loadResult == -1) throw CannotFindFile();
+	if (loadResult == 0) throw EmptyFile();
 
 	return "Training data was successfully loaded.\nThe number of data is " + std::to_string(pTrainingData->getSizeOfData()) + " rows.\n\nTraining of neural network is begining...\n";
 	//return "Training data was successfully loaded.\nThe number of data is " + std::to_string(pTrainingData->getSizeOfData()) + "rows.\n\nTraining of neural network is begining...\n"+ pBackPropagation->train();
