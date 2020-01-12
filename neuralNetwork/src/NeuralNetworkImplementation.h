@@ -1,6 +1,6 @@
-#pragma once
+
 #include "NeuralNetwork.h"
-#include "TrainingData.h"
+//#include "TrainingData.h"
 #include "BackPropagation.h"
 
 #include <iostream>

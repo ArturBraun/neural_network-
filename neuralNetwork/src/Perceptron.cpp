@@ -5,7 +5,7 @@
 
 Perceptron::Perceptron(int numberOfInputs)
 {
-	//generacja losowych wag dla polaczen neurona z przedzialu <-1,1>
+	//generacja losowych wag dla polaczen neuronu z przedzialu <-1,1>
 	for (int i = 0; i < numberOfInputs; ++i) {
 		srand((int)time(0));
 		double randomWeight = (double)rand() / RAND_MAX;

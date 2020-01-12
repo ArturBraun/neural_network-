@@ -1,6 +1,6 @@
-#pragma once
 #include "TrainingData.h"
 #include <string>
+#include <memory>
 
 class BackPropagation
 {

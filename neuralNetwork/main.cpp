@@ -1,27 +1,31 @@
-#include "GUI.h"
-#include <QtWidgets/QApplication>
 #include <iostream>
 #include <cassert>
-#include "NeuralNetworkImplementation.h"
-#include "TrainingData.h"
-#include "BackPropagation.h"
+//#include "src/NeuralNetworkImplementation.h"
+//#include "src/TrainingData.h"
+#include "src/GUI/GUI.h"
+#include <QtWidgets/QApplication>
+
+using namespace std;
 
 //class NeuralNetworkImplementation;
 //class TrainingData;
 //int test();
 
-
 int main(int argc, char* argv[])
 {
 	//test();
 
+	//shared_ptr<NeuralNetworkImplementation> pNeuralNetworkImplementation(new NeuralNetworkImplementation);
+	//shared_ptr<TrainingData> pTrainingData(new TrainingData);
 	std::shared_ptr<NeuralNetworkImplementation> pNeuralNetworkImplementation (new NeuralNetworkImplementation(3, 9, "DataForLearning.txt", 90.0, 0.1));
+
 	QApplication a(argc, argv);
 	GUI gui(pNeuralNetworkImplementation);
 	gui.printLogs(pNeuralNetworkImplementation->loadDataAndTrain());
 
 	gui.show();
 	return a.exec();
+
 }
 
 //int test()

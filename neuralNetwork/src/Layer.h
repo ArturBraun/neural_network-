@@ -1,4 +1,3 @@
-#pragma once
 #include "Perceptron.h"
 #include <vector>
 
