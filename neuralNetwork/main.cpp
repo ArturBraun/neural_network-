@@ -5,6 +5,8 @@
 #include "src/GUI/GUI.h"
 #include <QtWidgets/QApplication>
 
+#include "Exceptions.h"
+
 using namespace std;
 
 //class NeuralNetworkImplementation;
@@ -15,17 +17,25 @@ int main(int argc, char* argv[])
 {
 	//test();
 
-	//shared_ptr<NeuralNetworkImplementation> pNeuralNetworkImplementation(new NeuralNetworkImplementation);
-	//shared_ptr<TrainingData> pTrainingData(new TrainingData);
-	std::shared_ptr<NeuralNetworkImplementation> pNeuralNetworkImplementation (new NeuralNetworkImplementation(3, 9, "DataForLearning.txt", 90.0, 0.1));
-
+	std::shared_ptr<NeuralNetworkImplementation> pNeuralNetworkImplementation(new NeuralNetworkImplementation(3, 9, "DataForLearning.txt", 90.0, 0.1));
 	QApplication a(argc, argv);
 	GUI gui(pNeuralNetworkImplementation);
-	gui.printLogs(pNeuralNetworkImplementation->loadDataAndTrain());
 
+<<<<<<< HEAD
 	gui.show();
 	return gui.exec();
+=======
+	try {
+		gui.printLogs(pNeuralNetworkImplementation->loadDataAndTrain());
+>>>>>>> 2ee57a3aed26b269e4a290d7b235efbfde089f1b
 
+		gui.show();
+		return a.exec();
+	}
+	catch (BaseCustomException & e) {
+		gui.runErrorMessageBox(e.getMessage());
+		return 0;
+	}
 }
 
 //int test()
