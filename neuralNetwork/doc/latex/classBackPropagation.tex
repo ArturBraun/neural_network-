@@ -1,0 +1,32 @@
+\hypertarget{classBackPropagation}{}\section{Back\+Propagation Class Reference}
+\label{classBackPropagation}\index{Back\+Propagation@{Back\+Propagation}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBackPropagation_a57ed1352beb65c4411711b2666b4364f}\label{classBackPropagation_a57ed1352beb65c4411711b2666b4364f}} 
+{\bfseries Back\+Propagation} (std\+::shared\+\_\+ptr$<$ \hyperlink{classNeuralNetwork}{Neural\+Network} $>$ pointer\+Neural\+Network, std\+::shared\+\_\+ptr$<$ \hyperlink{classTrainingData}{Training\+Data} $>$ pointer\+Training\+Data, double desired\+Training\+Set\+Accuracy, double desired\+Training\+Set\+M\+SE, double alpha)
+\item 
+\mbox{\Hypertarget{classBackPropagation_a5ade83ce04d64e7957e696c562ac0696}\label{classBackPropagation_a5ade83ce04d64e7957e696c562ac0696}} 
+std\+::string {\bfseries train} ()
+\item 
+\mbox{\Hypertarget{classBackPropagation_af3c286055eaee6170f7563906f2fd988}\label{classBackPropagation_af3c286055eaee6170f7563906f2fd988}} 
+void {\bfseries run\+Current\+Iteration} (std\+::vector$<$ double $>$ \&one\+Row, double train\+Value)
+\item 
+\mbox{\Hypertarget{classBackPropagation_aa7409190b35e26a174421cd8208d8c86}\label{classBackPropagation_aa7409190b35e26a174421cd8208d8c86}} 
+double {\bfseries get\+Accuracy} ()
+\item 
+\mbox{\Hypertarget{classBackPropagation_a3e5c71db8020ee9b9f4e73c483aeecc9}\label{classBackPropagation_a3e5c71db8020ee9b9f4e73c483aeecc9}} 
+double {\bfseries get\+M\+SE} ()
+\item 
+\mbox{\Hypertarget{classBackPropagation_a671e9f4b4b8bc9ee469aef429515e5b5}\label{classBackPropagation_a671e9f4b4b8bc9ee469aef429515e5b5}} 
+double {\bfseries count\+M\+SE} (double result\+From\+Network, double correct\+Result)
+\item 
+\mbox{\Hypertarget{classBackPropagation_aba3f3d3f4d9942a6a2a8b78b81a085d0}\label{classBackPropagation_aba3f3d3f4d9942a6a2a8b78b81a085d0}} 
+void {\bfseries count\+Training\+Set\+Accuracy} (double output\+From\+Network, double correct\+Value)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/magdalena/neural\+\_\+network-\//neural\+Network/src/Back\+Propagation.\+h\item 
+/home/magdalena/neural\+\_\+network-\//neural\+Network/src/Back\+Propagation.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+\hypertarget{classPerceptron}{}\section{Perceptron Class Reference}
+\label{classPerceptron}\index{Perceptron@{Perceptron}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPerceptron_a1d0126d97a8ffa9e67780a22614dd70e}\label{classPerceptron_a1d0126d97a8ffa9e67780a22614dd70e}} 
+{\bfseries Perceptron} (int number\+Of\+Inputs, int offset\+For\+First\+Layer=0)
+\item 
+\mbox{\Hypertarget{classPerceptron_aa8481928b23d4c1193fe9a5be8be4f34}\label{classPerceptron_aa8481928b23d4c1193fe9a5be8be4f34}} 
+double {\bfseries get\+Output} (std\+::vector$<$ double $>$ \&output\+From\+Previous\+Layer)
+\item 
+\mbox{\Hypertarget{classPerceptron_ab892c5f786ef0adc50a1c67714176ec6}\label{classPerceptron_ab892c5f786ef0adc50a1c67714176ec6}} 
+double {\bfseries sigmoid} (double x)
+\item 
+\mbox{\Hypertarget{classPerceptron_ab875e1c9a1c95567679ac0cc8b8e2387}\label{classPerceptron_ab875e1c9a1c95567679ac0cc8b8e2387}} 
+double {\bfseries linear} (double x)
+\item 
+\mbox{\Hypertarget{classPerceptron_a354a430917bbd8616231952690a4a542}\label{classPerceptron_a354a430917bbd8616231952690a4a542}} 
+double {\bfseries get\+Weighted\+Input\+Value} (std\+::vector$<$ double $>$ \&output\+From\+Previous\+Layer)
+\item 
+\mbox{\Hypertarget{classPerceptron_a1be285519597daa4471b18f634f4c543}\label{classPerceptron_a1be285519597daa4471b18f634f4c543}} 
+std\+::vector$<$ double $>$ {\bfseries get\+Weights} (\hyperlink{classPerceptron}{Perceptron} \&neuron)
+\item 
+\mbox{\Hypertarget{classPerceptron_ac3ec883408c075c35205a6d85f942ceb}\label{classPerceptron_ac3ec883408c075c35205a6d85f942ceb}} 
+void {\bfseries step\+Backward} (double M\+SE, std\+::vector$<$ double $>$ \&input\+Values, double learning\+Rate)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/magdalena/neural\+\_\+network-\//neural\+Network/src/Perceptron.\+h\item 
+/home/magdalena/neural\+\_\+network-\//neural\+Network/src/Perceptron.\+cpp\end{DoxyCompactItemize}
