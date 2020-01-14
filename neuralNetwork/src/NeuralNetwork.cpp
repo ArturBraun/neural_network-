@@ -21,11 +21,11 @@ double NeuralNetwork::stepForward(const std::vector<double>& inputValues)
 	double output = resultsFromLayer[0];
 	return output;
 }
-
+//backpropagation in network
 void NeuralNetwork::stepBackward(double MSE, const std::vector<double>& inputValues, double learningRate) {
 	std::vector<double> resultsFromLayer = inputValues;
 
-	for (auto oneLayer : network) {
+	for (auto& oneLayer : network) {
 		oneLayer.stepBackward(MSE, resultsFromLayer, learningRate);
 		resultsFromLayer = oneLayer.getOutputFromThisLayer(resultsFromLayer);
 	}
@@ -35,7 +35,7 @@ bool NeuralNetwork::getResult(std::vector<double>& inputValues)
 {
 	double output = stepForward(inputValues);
 
-	if (output > 0.5) return true;
+	if (output > 0.45) return true;
 	else return false;
 
 }

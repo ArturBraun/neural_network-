@@ -21,10 +21,10 @@ std::string BackPropagation::train() {
 	std::string logsFromTraining;
 	//trainingSetAccuracy = 10;
 	//trainingSetMSE = 10;
-	learningRate = 100;
+	learningRate = 0.1;
 
-	int a = 0;
-	while (a < 2) {
+	int epoch = 0;
+	while (epoch < 10) {
 		for (int numberOfRow = 0; numberOfRow < pTrainingData->getSizeOfData(); ++numberOfRow) {
 			++currentIteration;
 			// vector of one row of DATA:
@@ -33,12 +33,13 @@ std::string BackPropagation::train() {
 			dataFromOneRow = pTrainingData->getDataFromOneRow(numberOfRow);
 			correctResult = dataFromOneRow.back();
 			dataFromOneRow.pop_back();
-
+				
 			runCurrentIteration(dataFromOneRow, correctResult);
+
 
 			logsFromTraining += "For " + std::to_string(currentIteration) + ". iteration trainingSetAccuracy was " + std::to_string(trainingSetAccuracy) + "% and MSE was " + std::to_string(trainingSetMSE) + ".\n";
 		}
-		++a;
+		++epoch;
 	}
 
 	logsFromTraining += "\n-------------------------------------------------------------------------------------------------------------\nLearning of Neural Network has successfully finished!\nThe number of iterations was "\
@@ -48,30 +49,6 @@ std::string BackPropagation::train() {
 
 	return logsFromTraining;
 }
-
-//std::string BackPropagation::train(NeuralNetwork& network) {
-//	std::string logsFromTraining;
-//	trainingSetAccuracy = 10;
-//	trainingSetMSE = 10;
-//	currentIteration = 0;
-//	learningRate = 0.1;
-//
-//	pTrainingData->splitData();
-//	std::vector<std::vector<double>> data = pTrainingData->getInputs();
-//	
-//	//for(auto it : data){
-//	//	while (trainingSetAccuracy > expectedTrainingSetAccuracy || trainingSetMSE > expectedTrainingSetMSE || currentIteration > maxIterations) {
-//	//		runCurrentIteration(network, it);
-//	//		++currentIteration;
-//
-//	//		logsFromTraining += "For " + std::to_string(currentIteration) + ". iteration trainingSetAccuracy was " + std::to_string(trainingSetAccuracy) + " and MSE was " + std::to_string(trainingSetMSE) + ".\n";
-//	//	}
-//	//}
-//
-//	logsFromTraining += "\nLearning of Neural Network has successfully finished!\nThe number of iterations was " + std::to_string(currentIteration) + ".\nFinal trainingSetAccuracy is " + std::to_string(trainingSetAccuracy) + " and MSE is " + std::to_string(trainingSetMSE) + ".\n\n";
-//	
-//	return logsFromTraining;
-//}
 
 void BackPropagation::runCurrentIteration(std::vector<double>& oneRow, double correctValue) {
 	double outputFromNetwork = pNeuralNetwork->stepForward(oneRow);
@@ -102,7 +79,8 @@ double BackPropagation::getMSE() {
 
 double BackPropagation::countMSE(double resultFromNetwork, double correctResult) {
 	trainingSetSumOfMSE += (pow((resultFromNetwork - correctResult), 2)) / 2;
-	trainingSetMSE = trainingSetSumOfMSE / ((double)currentIteration);
+	trainingSetMSE = (pow((resultFromNetwork-correctResult),2)/2);//trainingSetSumOfMSE / ((double)currentIteration);
+
 	return trainingSetMSE;
 }
 

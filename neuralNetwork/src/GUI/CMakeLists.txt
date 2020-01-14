@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.6)
 
-set(SOURCE_FILES GUI.cpp GUI.h GUI.ui GUI1.h GUI_.h)
+set(SOURCE_FILES GUI.cpp GUI.h GUI.ui GUI1.h)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 

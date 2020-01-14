@@ -24,10 +24,10 @@ std::vector<double> Layer::getOutputFromThisLayer(std::vector<double>& outputFro
 
 	return resultsFromThisLayer;
 }
-
+//backpropagation in layer
 void Layer::stepBackward(double MSE, std::vector<double>& inputValues, double learningRate) {
 
-	for (auto oneNeuron : neurons) {
+	for (auto& oneNeuron : neurons) {
 		oneNeuron.stepBackward(MSE, inputValues, learningRate);
 	}
 }

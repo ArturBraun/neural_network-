@@ -137,6 +137,10 @@ void GUI::runProcess()
 		}
 	}
 
+	for(auto tmp : parameters){
+		tmp = tmp/10;
+	}
+
 	std::string result = pNeuralNetworkImplementation->getClassification(parameters);
 	printLogs("Patient tumor is " + result + ".");
 

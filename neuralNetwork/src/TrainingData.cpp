@@ -26,7 +26,7 @@ int TrainingData::loadData() {
 
 			for (auto oneCharacter : oneRow) {
 				if (oneCharacter == '\t') {
-					rowOfData.push_back(stod(strNumber));
+					rowOfData.push_back(stod(strNumber)/10);
 					strNumber.clear();
 				}
 				else strNumber += oneCharacter;

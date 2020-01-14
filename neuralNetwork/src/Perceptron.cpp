@@ -22,6 +22,10 @@ double Perceptron::sigmoid(double x) {
 	return 1 / (1+exp(-x));
 }
 
+double Perceptron::linear(double x){
+	return x;
+}
+
 double Perceptron::getOutput(std::vector<double>& outputFromPreviousLayer)
 {
 	return sigmoid(getWeightedInputValue(outputFromPreviousLayer));
@@ -32,7 +36,7 @@ void Perceptron::stepBackward(double MSE, std::vector<double>& inputValues, doub
 	//	oneWeight -= learningRate * MSE * getWeightedInputValue(inputValues);
 	//}
 	for (int i = 0; i < weightsOfInputs.size(); ++i) {
-		weightsOfInputs[i] = weightsOfInputs[i] - learningRate * MSE * getWeightedInputValue(inputValues);
+		weightsOfInputs[i] -= learningRate * MSE * getWeightedInputValue(inputValues);
 	}
 }
 
