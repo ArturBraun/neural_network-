@@ -41,3 +41,7 @@ mkdir build
 cd build 
 cmake -G "$GENERATOR" ../ #w miejsce GENERATOR należy wstawić kompilator
 cmake --build . 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 491da6454e239900f1ebfe24dbb59a6af22e2d7e
