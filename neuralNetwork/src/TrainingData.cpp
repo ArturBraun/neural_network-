@@ -61,8 +61,10 @@ void TrainingData::splitData(){
 		oneRow.erase(oneRow.end());
 		inputData.push_back(oneRow);
 	}
+}
 
-	
+std::vector<double> TrainingData::getDataFromOneRow(int idx) {
+	return loadedData[idx];
 }
 
 std::vector<double> TrainingData::getResults(){

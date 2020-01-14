@@ -1,14 +1,18 @@
 #include "Layer.h"
 
-Layer::Layer(int numberOfNeurons, int numberOfInputsForOnePercepton, bool threshold)
+Layer::Layer(int numberOfNeurons, int numberOfInputsForOnePercepton, bool offsetForFirsLayer)
 	:numberOfNeurons(numberOfNeurons)
 {
-	for (int i = 0; i < numberOfNeurons; ++i) {
-		neurons.push_back(Perceptron(numberOfInputsForOnePercepton));
+	if (offsetForFirsLayer) {
+		for (int i = 0; i < numberOfNeurons; ++i) {
+			neurons.push_back(Perceptron(numberOfInputsForOnePercepton, i));
+		}
 	}
-
-	//if (threshold) neurons.push_back(Perceptron(0)); //threshold percepton
-
+	else {
+		for (int i = 0; i < numberOfNeurons; ++i) {
+			neurons.push_back(Perceptron(numberOfInputsForOnePercepton));
+		}
+	}
 }
 
 std::vector<double> Layer::getOutputFromThisLayer(std::vector<double>& outputFromPreviousLayer) {
@@ -19,4 +23,11 @@ std::vector<double> Layer::getOutputFromThisLayer(std::vector<double>& outputFro
 	}
 
 	return resultsFromThisLayer;
+}
+
+void Layer::stepBackward(double MSE, std::vector<double>& inputValues, double learningRate) {
+
+	for (auto oneNeuron : neurons) {
+		oneNeuron.stepBackward(MSE, inputValues, learningRate);
+	}
 }
