@@ -17,18 +17,13 @@ int main(int argc, char* argv[])
 {
 	//test();
 
-	std::shared_ptr<NeuralNetworkImplementation> pNeuralNetworkImplementation(new NeuralNetworkImplementation(3, 9, "DataForLearning.txt", 90.0, 0.1));
+	std::shared_ptr<NeuralNetworkImplementation> pNeuralNetworkImplementation(new NeuralNetworkImplementation(3, 9, "DataForLearning.txt", 90.0, 0.1,0.1));
 	QApplication a(argc, argv);
 	GUI gui(pNeuralNetworkImplementation);
 
-<<<<<<< HEAD
-	gui.show();
-	return gui.exec();
-=======
-	try {
+	
+	try{
 		gui.printLogs(pNeuralNetworkImplementation->loadDataAndTrain());
->>>>>>> 2ee57a3aed26b269e4a290d7b235efbfde089f1b
-
 		gui.show();
 		return a.exec();
 	}

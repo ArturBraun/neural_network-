@@ -1,10 +1,10 @@
 #include "NeuralNetworkImplementation.h"
 #include "Exceptions.h"
 
-NeuralNetworkImplementation::NeuralNetworkImplementation(int numberOfLayers, int numberOfInputNeurons, std::string const& dataFilename, double desiredTrainingSetAccuracy, double desiredTrainingSetMSE)
+NeuralNetworkImplementation::NeuralNetworkImplementation(int numberOfLayers, int numberOfInputNeurons, std::string const& dataFilename, double desiredTrainingSetAccuracy, double desiredTrainingSetMSE, double alpha)
 	:pNeuralNetwork(new NeuralNetwork(numberOfLayers, numberOfInputNeurons)),
 	pTrainingData(new TrainingData(dataFilename)),
-	pBackPropagation(new BackPropagation(pTrainingData,desiredTrainingSetAccuracy,desiredTrainingSetMSE))
+	pBackPropagation(new BackPropagation(pTrainingData,desiredTrainingSetAccuracy,desiredTrainingSetMSE, alpha))
 {
 
 }

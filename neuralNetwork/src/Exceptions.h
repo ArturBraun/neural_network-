@@ -1,5 +1,3 @@
-#pragma once
-
 class BaseCustomException : public std::exception 
 {
 public:
@@ -14,7 +12,7 @@ class CannotFindFile : public BaseCustomException
 {
 public:
 	std::pair<char*, char*> getMessage() {
-		std::pair<char*, char*> titleAndMessage("Error with data file!", "Cannot find the file DataForLearning.txt in the src folder!\nThe application is closing...");
+		std::pair<char*, char*> titleAndMessage("Error with data file!", "Cannot find the file DataForLearning.txt!\nFile should be located in folder with executing program.\nThe application is closing...");
 		return titleAndMessage;
 	}
 };

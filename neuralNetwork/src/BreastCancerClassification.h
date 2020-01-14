@@ -1,5 +1,7 @@
 #include "NeuralNetworkImplementation.h"
 
+
+
 class BreastCancerClassification//: public NeuralNetworkImplementation
 {
 public:

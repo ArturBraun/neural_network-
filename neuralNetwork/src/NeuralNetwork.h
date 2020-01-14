@@ -1,5 +1,6 @@
 
 #include <vector>
+#include <boost/array.hpp>
 #include "Layer.h"
 
 
@@ -10,7 +11,8 @@ public:
 	//NeuralNetwork();
 	NeuralNetwork(int numberOfLayers, int numberOfInputNeurons);
 
-	void stepForward(const std::vector<double>& Input);
+	double stepForward(const std::vector<double>& Input);
+	void stepBackward(double MSE);
 	bool getResult(std::vector<double>& inputValues);
 
 private:

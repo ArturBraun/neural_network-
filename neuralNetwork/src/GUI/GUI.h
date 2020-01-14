@@ -1,4 +1,4 @@
-#pragma once
+
 
 #include <vector>
 #include <QtWidgets/QMainWindow>
@@ -16,7 +16,7 @@ public:
 	void printLogs(std::string content); //wypisywanie logow w GUI do LogsTextEdit
 	void printError(std::string content); //wypisywanie kominkatach o bledach do LogsTextEdit
 
-	void runErrorMessageBox(std::pair<char*,char*>& titleAndMessage);
+	void runErrorMessageBox(std::pair<char*,char*> titleAndMessage);
 
 private slots:
 	void runProcess(); //odpalanie procesu kwalifikacji dla pobranych danych

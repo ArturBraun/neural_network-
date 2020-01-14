@@ -27,7 +27,7 @@ void GUI::newFile() {
 	ui.LogsTextEdit->clear();
 }
 
-void GUI::runErrorMessageBox(std::pair<char*, char*>& titleAndMessage) {
+void GUI::runErrorMessageBox(std::pair<char*, char*> titleAndMessage) {
 	QMessageBox::StandardButton errorWithData;
 	errorWithData = QMessageBox::critical(this, tr(titleAndMessage.first),
 		tr(titleAndMessage.second),

@@ -7,10 +7,11 @@ public:
 
 	Layer(int numberOfNeurons, int numberOfInputsForOnePercepton, bool threshold);
 	std::vector<double> getOutputFromThisLayer(std::vector<double>& outputFromPreviousLayer);
+	std::vector<Perceptron> neurons;
 	//~Layer();
 
 private:
-	std::vector<Perceptron> neurons;
+	
 	int numberOfNeurons;
 
 

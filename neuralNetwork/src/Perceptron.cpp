@@ -35,3 +35,8 @@ double Perceptron::getOutput(std::vector<double>& outputFromPreviousLayer)
 void Perceptron::setWeightsOfInputs(std::vector<double>& newWeights) {
 	weightsOfInputs = newWeights;
 }
+
+std::vector<double> Perceptron::getWeights(Perceptron& neuron)
+{
+	return neuron.weightsOfInputs;
+}

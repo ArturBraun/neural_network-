@@ -15,6 +15,12 @@ public:
 	unsigned nextInputVector(std::vector<double>& input); // dane wejsciowe do sieci
 	int nextOutputValue(double output); //wartosc oczekiwana na wyjsciu
 
+	std::vector<double> getDataRow();
+
+	void splitData(); //podzial danych na wejsciowe i wyjsciowe
+	std::vector<double> getResults(); //zwraca wektor danych wyjsciowych
+	std::vector<std::vector<double>> getInputs(); //zwraca dane wejsciowe
+
 private:
 	std::string filename;
 	//std::vector<int> rowOfData;
@@ -23,6 +29,8 @@ private:
 	// Kazdy element tego wektora to pobrane dane z pliku z jednego rzedu w ponizszej kolejnosci
 	// np. loadedData[0][0] -> oznacza parametr Clump Thickness z 1 rzedu danych z pliku
 	std::vector<std::vector<double>> loadedData;
+	std::vector<std::vector<double>> inputData;
+	std::vector<double> expectedResults;
 	/*
 	[0] = Clump Thickness
 	[1] = Uniformity of Cell Size

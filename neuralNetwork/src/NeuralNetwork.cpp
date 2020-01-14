@@ -9,17 +9,8 @@ NeuralNetwork::NeuralNetwork(int numberOfLayers, int numberOfInputNeurons)
 	network.push_back(Layer(1,numberOfInputNeurons, false));
 }
 
-//NeuralNetwork::NeuralNetwork()
-//{
-//
-//}
-
-void NeuralNetwork::stepForward(const std::vector<double>& Input)
-{
-
-}
-
-bool NeuralNetwork::getResult(std::vector<double>& inputValues)
+//function returns activation of output layer
+double NeuralNetwork::stepForward(const std::vector<double>& inputValues)
 {
 	std::vector<double> resultsFromLayer = inputValues;
 	int i = 0;
@@ -27,6 +18,16 @@ bool NeuralNetwork::getResult(std::vector<double>& inputValues)
 		resultsFromLayer = network[i].getOutputFromThisLayer(resultsFromLayer);
 	}
 	double output = resultsFromLayer[0];
+	return output;
+}
+
+/*void NeuralNetwork::stepBackward(double MSE){
+	network.end()->neurons.begin()->setWeightsOfInputs();
+}*/
+
+bool NeuralNetwork::getResult(std::vector<double>& inputValues)
+{
+	double output = stepForward(inputValues);
 
 	//	1 -> chory
 	//	0 -> zdrowy
