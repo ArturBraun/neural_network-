@@ -21,9 +21,9 @@ double NeuralNetwork::stepForward(const std::vector<double>& inputValues)
 	return output;
 }
 
-/*void NeuralNetwork::stepBackward(double MSE){
+void NeuralNetwork::stepBackward(double MSE){
 	network.end()->neurons.begin()->setWeightsOfInputs();
-}*/
+}
 
 bool NeuralNetwork::getResult(std::vector<double>& inputValues)
 {
