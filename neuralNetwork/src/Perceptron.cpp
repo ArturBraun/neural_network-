@@ -3,15 +3,16 @@
 #include <ctime>
 #include <math.h> 
 
-Perceptron::Perceptron(int numberOfInputs)
+Perceptron::Perceptron(int numberOfInputs, int offsetForFirstLayer)
+	:offsetForFirstLayer(offsetForFirstLayer)
 {
 	//generacja losowych wag dla polaczen neuronu z przedzialu <-1,1>
 	for (int i = 0; i < numberOfInputs; ++i) {
-		srand((int)time(0));
-		double randomWeight = (double)rand() / RAND_MAX;
-		randomWeight = -1 + randomWeight * 2;
+		//srand((int)time(0));
+		//double randomWeight = (double)rand() / RAND_MAX;
+		//randomWeight = -1 + randomWeight * 2;
 
-		//double randomWeight = -1;
+		double randomWeight = -1;
 
 		weightsOfInputs.push_back(randomWeight);
 	}
@@ -23,17 +24,24 @@ double Perceptron::sigmoid(double x) {
 
 double Perceptron::getOutput(std::vector<double>& outputFromPreviousLayer)
 {
-	double x = 0;
-	int i = 0;
-	for (i = 0; i < weightsOfInputs.size(); ++i) {
-		x += outputFromPreviousLayer[i] * weightsOfInputs[i];
-	}
-	//x -= outputFromPreviousLayer[i] * weightsOfInputs[i]; //threshold
-	return sigmoid(x);
+	return sigmoid(getWeightedInputValue(outputFromPreviousLayer));
 }
 
-void Perceptron::setWeightsOfInputs(std::vector<double>& newWeights) {
-	weightsOfInputs = newWeights;
+void Perceptron::stepBackward(double MSE, std::vector<double>& inputValues, double learningRate) {
+	//for (auto& oneWeight : weightsOfInputs) {
+	//	oneWeight -= learningRate * MSE * getWeightedInputValue(inputValues);
+	//}
+	for (int i = 0; i < weightsOfInputs.size(); ++i) {
+		weightsOfInputs[i] = weightsOfInputs[i] - learningRate * MSE * getWeightedInputValue(inputValues);
+	}
+}
+
+double Perceptron::getWeightedInputValue(std::vector<double>& outputFromPreviousLayer) {
+	double x = 0;
+	for (int i = 0; i < weightsOfInputs.size(); ++i) {
+		x += outputFromPreviousLayer[i + offsetForFirstLayer] * weightsOfInputs[i];
+	}
+	return x;
 }
 
 std::vector<double> Perceptron::getWeights(Perceptron& neuron)

@@ -3,34 +3,38 @@
 NeuralNetwork::NeuralNetwork(int numberOfLayers, int numberOfInputNeurons)
 {
 	network.push_back(Layer(numberOfInputNeurons, 1, true));
-	for (int i = 1; i < numberOfLayers-1; ++i) {
-		network.push_back(Layer(numberOfInputNeurons,numberOfInputNeurons, true));
+	for (int i = 1; i < numberOfLayers - 1; ++i) {
+		network.push_back(Layer(numberOfInputNeurons, numberOfInputNeurons));
 	}
-	network.push_back(Layer(1,numberOfInputNeurons, false));
+	network.push_back(Layer(1, numberOfInputNeurons));
 }
 
 //function returns activation of output layer
 double NeuralNetwork::stepForward(const std::vector<double>& inputValues)
 {
 	std::vector<double> resultsFromLayer = inputValues;
-	int i = 0;
-	for (i = 0; i < network.size(); ++i) {
-		resultsFromLayer = network[i].getOutputFromThisLayer(resultsFromLayer);
+
+	for (auto oneLayer : network) {
+		resultsFromLayer = oneLayer.getOutputFromThisLayer(resultsFromLayer);
 	}
+
 	double output = resultsFromLayer[0];
 	return output;
 }
 
-void NeuralNetwork::stepBackward(double MSE){
-	network.end()->neurons.begin()->setWeightsOfInputs();
+void NeuralNetwork::stepBackward(double MSE, const std::vector<double>& inputValues, double learningRate) {
+	std::vector<double> resultsFromLayer = inputValues;
+
+	for (auto oneLayer : network) {
+		oneLayer.stepBackward(MSE, resultsFromLayer, learningRate);
+		resultsFromLayer = oneLayer.getOutputFromThisLayer(resultsFromLayer);
+	}
 }
 
 bool NeuralNetwork::getResult(std::vector<double>& inputValues)
 {
 	double output = stepForward(inputValues);
 
-	//	1 -> chory
-	//	0 -> zdrowy
 	if (output > 0.5) return true;
 	else return false;
 

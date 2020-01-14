@@ -1,4 +1,4 @@
-
+#pragma once
 //#include "NeuralNetwork.h"
 //#include "TrainingData.h"
 #include "BackPropagation.h"
