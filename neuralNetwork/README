@@ -15,7 +15,7 @@ Kompilator C++ (VS, g++, etc.)
 
 
 
-W systemach korzystających z repozytoriów Debiana (m.in. Ubuntu) wystarczy zainstalować paczkę "qt5base-dev".
+W systemach korzystających z repozytoriów Debiana (m.in. Ubuntu) wystarczy zainstalować paczkę "qtbase5-dev".
 
 W przypadku pozostałych systemów należy zainstalować Qt pobierając go wpierw ze strony projektu - https://www.qt.io/download-open-source/
 
