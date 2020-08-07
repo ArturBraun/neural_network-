@@ -1,5 +1,7 @@
 Projekt na przedmiot ZPR
+
 "Sieć neuronowa"
+
 Autorzy: Artur Braun Magdalena Segieda
 
 Do skompilowania projektu niezbędne są:
@@ -34,14 +36,13 @@ cmake ../ # uruchomienie CMake
 make # kompilacja i konsolidacja projektu   
 ./ZPR_NN # uruchomienie programu
 
-SYSTEM WINDOWS
-kompilacja w programie VisualStudio lub
-W power shell:
-mkdir build
-cd build 
-cmake -G "$GENERATOR" ../ #w miejsce GENERATOR należy wstawić kompilator
-cmake --build . 
-<<<<<<< HEAD
-=======
+SYSTEM WINDOWS -> kompilacja w programie VisualStudio lub w power shell:
 
->>>>>>> 491da6454e239900f1ebfe24dbb59a6af22e2d7e
+mkdir build
+
+cd build 
+
+cmake -G "$GENERATOR" ../ #w miejsce GENERATOR należy wstawić kompilator
+
+cmake --build . 
+
